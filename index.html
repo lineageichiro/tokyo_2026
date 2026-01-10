@@ -107,7 +107,7 @@ function Mc(a,b,c,d){var e=c+-1,k=a.length-1;if(k>=0&&e>=k){var f=a[k];if(f!=nul
 function Oc(a,b,c){var d=Pc,e=a.get(d);if(e!=null)return e;for(var k=e=0;k<d.length;k++){var f=d[k];Kc(b,f)!=null&&(e!==0&&(c=Mc(b,c,e)),e=f)}a.set(d,e);return e}function Qc(a,b,c,d){var e=!1;d=Kc(a,d,void 0,function(k){if(k!=null&&k[hb]===mb)var f=k;else if(Array.isArray(k)){f=k[z]|0;var g=f|b&32;g|=b&2;g!==f&&lb(k,g);f=new c(k)}else f=void 0;e=f!==k&&f!=null;return f});if(d!=null)return e&&!nb(d)&&Hc(a,b),d}
 function Rc(a,b,c){var d=a.I,e=d[z]|0;b=Qc(d,e,b,c);if(b==null)return b;e=d[z]|0;if(!nb(a,e)){var k=b;var f=k.I,g=f[z]|0;k=nb(k,g)?Dc(k,f,g)?Ec(k,f,!0):new k.constructor(Cc(f,g,!1)):k;k!==b&&(Fc(a)&&(d=a.I,e=d[z]|0),b=k,e=Mc(d,e,c,b),Hc(d,e))}return b}function Sc(a){a==null&&(a=void 0);return a}function Tc(a,b){return Ta?Jc(a,b,void 0,Ic,tc):tc(Jc(a,b,void 0,Ic))}function Uc(a,b,c){a=Jc(a,b,void 0,c);return a==null||typeof a==="string"?a:void 0}
 function M(a,b){var c=c===void 0?!1:c;var d;return(d=Sb(Jc(a,b)))!=null?d:c}function N(a,b){return Sb(Jc(a,b,void 0,Ic))}function Q(a,b){return Vb(Jc(a,b,void 0,Ic))}function Vc(a,b){return Ta?Jc(a,b,void 0,Ic,rc):rc(Jc(a,b,void 0,Ic))}function Wc(a,b){return Jc(a,b,void 0,Ic,Rb)}function R(a,b){return Uc(a,b,Ic)}function S(a,b,c){if(c!=null&&typeof c!=="boolean")throw Error("Expected boolean but got "+Na(c)+": "+c);Lc(a,b,c)}
-function T(a,b,c){if(c!=null){if(typeof c!=="number")throw Wa("int32");if(!Pb(c))throw Wa("int32");c|=0}Lc(a,b,c)}function Xc(a,b,c){if(c!=null&&typeof c!=="number")throw Error("Value of float/double field must be a number, found "+typeof c+": "+c);Lc(a,b,c)}function Yc(a,b,c){if(c!=null&&typeof c!=="string")throw Error();Lc(a,b,c)};function Zc(a,b,c){this.I=zc(a,b,c,2048)}Zc.prototype.toJSON=function(){return yc(this)};Zc.prototype[hb]=mb;Zc.prototype.toString=function(){return this.I.toString()};function $c(a){this.I=zc(a,void 0,void 0,2048)}oa($c,Zc);function ad(a){this.I=zc(a,void 0,void 0,2048)}oa(ad,Zc);function bd(a){this.I=zc(a,void 0,void 0,2048)}oa(bd,Zc);function cd(a){this.I=zc(a,void 0,void 0,2048)}oa(cd,Zc);function dd(a){this.I=zc(a,void 0,void 0,2048)}oa(dd,Zc);var Pc=[1,2,3];/*
+function T(a,b,c){if(c!=null){if(typeof c!=="number")throw Wa("int32");if(!Pb(c))throw Wa("int32");c|=0}Lc(a,b,c)}function Xc(a,b,c){if(c!=null&&typeof c!=="number")throw Error("Value of float/double field must be a number, found "+typeof c+": "+c);Lc(a,b,c)}function Yc(a,b,c){if(c!=null&&typeof c!=="string")throw Error();Lc(a,b,c)};function Zc(a,b,c){this.I=zc(a,b,c,2048)}Zc.prototype.toJSON=function(){return yc(this)};Zc.prototype[hb]=mb;Zc.prototype.toString=function(){return this.I.toString()};function $c(a){this.I=zc(a,void 0,void 0,2048)}oa($c,Zc);function ad(a){this.I=zc(a,void 0,void 0,2048)}oa(ad,Zc);function bd(a){this.I=zc(a,void 0,void 0,2048)}oa(bd,Zc);function cd(a){this.I=zc(a,void 0,void 0,2048)}oa(cd,Zc);function dd(a){this.I=zc(a,void 0,void 0,2048)}oa(dd,Zc);var Pc=[1,2,3,4];/*
 
  Copyright Google LLC
  SPDX-License-Identifier: Apache-2.0
@@ -115,7 +115,7 @@ function T(a,b,c){if(c!=null){if(typeof c!=="number")throw Wa("int32");if(!Pb(c)
 var ed=globalThis.trustedTypes,fd;function gd(){var a=null;if(!ed)return a;try{var b=function(c){return c};a=ed.createPolicy("goog#html",{createHTML:b,createScript:b,createScriptURL:b})}catch(c){}return a};function hd(a){this.A=a}hd.prototype.toString=function(){return this.A+""};function id(a){var b;fd===void 0&&(fd=gd());a=(b=fd)?b.createScriptURL(a):a;return new hd(a)};function jd(a){this.B=a}jd.prototype.toString=function(){return this.B};function kd(a){var b=window;if(typeof MediaSource!=="undefined"&&a instanceof MediaSource||typeof b.ManagedMediaSource!=="undefined"&&a instanceof b.ManagedMediaSource)return a=URL.createObjectURL(a),new jd(a);b=a.type;b.toLowerCase()==="application/octet-stream"?b=!0:(b=b.match(/^([^;]+)(?:;\w+=(?:\w+|"[\w;,= ]+"))*$/i),b=(b==null?void 0:b.length)===2&&(/^image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp|x-icon|heic|heif|avif|x-ms-bmp)$/i.test(b[1])||/^video\/(?:3gpp|avi|mpeg|mpg|mp4|ogg|webm|x-flv|x-matroska|quicktime|x-ms-wmv)$/i.test(b[1])||
 /^audio\/(?:3gpp2|3gpp|aac|amr|L16|midi|mp3|mp4|mpeg|oga|ogg|opus|x-m4a|x-matroska|x-wav|wav|webm)$/i.test(b[1])||/^font\/[\w-]+$/i.test(b[1])));if(!b)throw Error("");a=URL.createObjectURL(a);return new jd(a)}var ld=/^\s*(?!javascript:)(?:[\w+.-]+:|[^:/?#]*(?:[/?#]|$))/i;function md(a){if(a instanceof jd)if(a instanceof jd)a=a.B;else throw Error("");else a=ld.test(a)?a:void 0;return a};var nd="alternate author bookmark canonical cite help icon license modulepreload next prefetch dns-prefetch prerender preconnect preload prev search subresource".split(" ");function od(a,b){if(b instanceof hd){if(b instanceof hd)b=b.A;else throw Error("");a.href=b.toString();a.rel="stylesheet"}else{if(nd.indexOf("stylesheet")===-1)throw Error('TrustedResourceUrl href attribute required with rel="stylesheet"');b=md(b);b!==void 0&&(a.href=b,a.rel="stylesheet")}};function pd(){window.addEventListener("click",function(a){for(var b=document.elementsFromPoint(a.clientX,a.clientY).filter(function(e){return e instanceof HTMLButtonElement&&e.classList.contains("dyn-img-attribution-button-di-script")?!qd(e):!1}),c=t(b),d=c.next();!d.done;d=c.next())if(d.value===a.target)return;b.length>0&&(b.length>1&&console.debug("More than 1 attribution button found covered, only triggering the first one."),a=b[0],console.debug("Triggering covered attribution button"),a.click())})}
 function rd(a,b){b.addEventListener("click",function(c){c.stopPropagation();c=new dd;var d=new cd,e=a;e=Sc(e);Lc(d,1,e);e&&!nb(e)&&Hc(d.I);d=Sc(d);a:{Gc(c);e=c.I;var k=e[z]|0;if(d==null){var f=Nc(e);if(Oc(f,e,k)===2)f.set(Pc,0);else break a}else{f=Nc(e);var g=Oc(f,e,k);g!==2&&(g&&(k=Mc(e,k,g)),f.set(Pc,2))}Mc(e,k,2,d)}d&&!nb(d)&&Hc(c.I);c=JSON.stringify(yc(c));window.parent.postMessage({source:"__geminigo_renderer",payload:c},"*")})}
-function qd(a){a=getComputedStyle(a);return a.display==="none"||a.visibility==="hidden"||a.opacity==="0"};var sd=function(a){return function(b){b=JSON.parse(b);if(!Array.isArray(b))throw Error("Expected jspb data to be an array, got "+Na(b)+": "+b);kb(b,34);return new a(b)}}(bd);var td=RegExp("^((http(s)?):)?\\/\\/((((lh[3-6](-tt|-d[a-g,y,z]|-testonly)?\\.((ggpht)|(googleusercontent)|(google)|(sandbox\\.google)))|(lh7\\-(eu|us|qw|rt)\\.((googleusercontent)|(google)))|((photos|testonly|work)\\.fife\\.usercontent\\.google)|([\\w\\-]+\\.fife\\.usercontent\\.google)|(([1-4]\\.bp\\.blogspot)|(bp[0-3]\\.blogger))|(ccp-lh\\.googleusercontent)|((((cp|ci|gp)[3-6])|(ap[1-2]))\\.(ggpht|googleusercontent))|(gm[1-4]\\.ggpht)|(play-(ti-)?lh\\.googleusercontent)|(gz0\\.googleusercontent)|(((yt[3-4])|(sp[1-3]))\\.(ggpht|googleusercontent)))\\.com)|(drive\\.google\\.com\\/drive\\-(usercontent|viewer))|(dp[3-6]\\.googleusercontent\\.cn)|(lh[3-6]\\.(googleadsserving\\.cn|xn--9kr7l\\.com))|((photos|drive|contribution)\\-image\\-(dev|qa)(-us|-eu)?(-auth|-cookie)?\\.corp\\.google\\.com)|(photos\\-image\\-dev\\-dl\\-(auth|eu|us)\\.corp\\.google\\.com)|((dev|dev2|dev3|qa|qa2|qa3|qa-red|qa-blue|canary)[-.]lighthouse\\.sandbox\\.google\\.com\\/image)|(image\\-(dev|qa)\\-lighthouse(-auth)?\\.sandbox\\.google\\.com(\\/image)?)|(drive\\-qa\\.corp\\.google\\.com\\/drive\\-(usercontent|viewer))|(docs(\\-(dev|qa)\\.corp)?\\.google\\.com\\/(docs|sheets|slides|drawings|forms|videos)\\-images\\-(rt|qw)))\\/",
+function qd(a){a=getComputedStyle(a);return a.display==="none"||a.visibility==="hidden"||a.opacity==="0"};var sd=function(a){return function(b){b=JSON.parse(b);if(!Array.isArray(b))throw Error("Expected jspb data to be an array, got "+Na(b)+": "+b);kb(b,34);return new a(b)}}(bd);var td=RegExp("^((http(s)?):)?\\/\\/((((lh[3-6](-tt|-d[a-g,y,z]|-testonly)?\\.((ggpht)|(googleusercontent)|(google)|(sandbox\\.google)))|(lh7\\-(eu|us|qw|rt)\\.((googleusercontent)|(google)))|((photos|testonly|work)\\.fife\\.usercontent\\.google)|([\\w\\-]+\\.fife\\.usercontent\\.google)|(([1-4]\\.bp\\.blogspot)|(bp[0-3]\\.blogger))|(ccp-lh\\.googleusercontent)|((((cp|ci|gp)[3-6])|(ap[1-2]))\\.(ggpht|googleusercontent))|(gm[1-4]\\.ggpht)|(play-(ti-)?lh\\.googleusercontent)|(gz0\\.googleusercontent)|(((yt[3-4])|(sp[1-3]))\\.(ggpht|googleusercontent)))\\.com)|(drive\\.google\\.com\\/drive\\-(usercontent|viewer))|(dp[3-6]\\.googleusercontent\\.cn)|(lh[3-6]\\.(googleadsserving\\.cn|xn--9kr7l\\.com))|((photos|drive|contribution)\\-image\\-(dev|qa)(-us|-eu)?(-auth|-cookie)?\\.corp\\.google\\.com)|(photos\\-image\\-dev\\-dl\\-(auth|eu|us)\\.corp\\.google\\.com)|((dev|dev2|dev3|qa|qa2|qa3|qa-red|qa-blue|canary)[-.]lighthouse\\.sandbox\\.google\\.com\\/image)|(image\\-(dev|qa)\\-lighthouse(-auth)?\\.sandbox\\.google\\.com(\\/image)?)|(drive\\-qa\\.corp\\.google\\.com\\/drive\\-(usercontent|viewer))|(docs(\\-(dev|qa)\\.corp)?\\.google\\.com\\/(u\\/[0-9]+\\/)?(docs|sheets|slides|drawings|forms|videos)\\-images\\-(rt|qw))|(docs\\.sandbox\\.google\\.com\\/(u\\/[0-9]+\\/)?(docs|sheets|slides|drawings|forms|videos)\\-images))\\/",
 "i"),ud=/^(https?:)?\/\/sp[1-4]\.((ggpht)|(googleusercontent))\.com\//i,vd=/^(https?:)?\/\/(qa(-red|-blue)?|dev2?|image-dev)(-|\.)lighthouse(-auth)?\.sandbox\.google\.com\//i,wd=/^(https?:)?\/\/lighthouse-(qa(-red|-blue)?|dev2)\.corp\.google\.com\//i;function xd(a){this.I=zc(a,void 0,void 0,2048)}oa(xd,Zc);var yd=String.prototype.repeat?function(a,b){return a.repeat(b)}:function(a,b){return Array(b+1).join(a)};function zd(a,b){var c=Array.prototype.slice.call(arguments),d=c.shift();if(typeof d=="undefined")throw Error("[goog.string.format] Template required");d.replace(/%([0\- \+]*)(\d+)?(\.(\d+))?([%sfdiu])/g,function(e,k,f,g,l,m,u,D){if(m=="%")return"%";var F=c.shift();if(typeof F=="undefined")throw Error("[goog.string.format] Not enough arguments");arguments[0]=F;return Ad[m].apply(null,arguments)})}
 var Ad={s:function(a,b,c){return isNaN(c)||c==""||a.length>=Number(c)?a:a=b.indexOf("-",0)>-1?a+yd(" ",Number(c)-a.length):yd(" ",Number(c)-a.length)+a},f:function(a,b,c,d,e){d=a.toString();isNaN(e)||e==""||(d=parseFloat(a).toFixed(e));var k=Number(a)<0?"-":b.indexOf("+")>=0?"+":b.indexOf(" ")>=0?" ":"";Number(a)>=0&&(d=k+d);if(isNaN(c)||d.length>=Number(c))return d;d=isNaN(e)?Math.abs(Number(a)).toString():Math.abs(Number(a)).toFixed(e);a=Number(c)-d.length-k.length;return d=b.indexOf("-",0)>=0?
 k+d+yd(" ",a):k+yd(b.indexOf("0",0)>=0?"0":" ",a)+d},d:function(a,b,c,d,e,k,f,g){return Ad.f(parseInt(a,10),b,c,d,0,k,f,g)}};Ad.i=Ad.d;Ad.u=Ad.d;function Bd(){this.B=void 0;this.A={}}p=Bd.prototype;p.set=function(a,b){Cd(this,a,b,!1)};p.add=function(a,b){Cd(this,a,b,!0)};function Cd(a,b,c,d){for(var e=0;e<b.length;e++){var k=b.charAt(e);a.A[k]||(a.A[k]=new Bd);a=a.A[k]}if(d&&a.B!==void 0)throw Error('The collection already contains the key "'+b+'"');a.B=c}function Dd(a,b){for(var c=0;c<b.length;c++)if(a=a.A[b.charAt(c)],!a)return;return a}p.get=function(a){return(a=Dd(this,a))?a.B:void 0};p.la=function(){var a=[];Ed(this,a);return a};
@@ -192,6 +192,9 @@ wb);O(IMG_SEARCH_ATTRIBUTION_MAP,Pd);O(IMG_GEN_REPLACE_MAP,fa.A);X();jf();h.A=0}
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>2026 東京河口湖自由行</title>
+    <!-- 1. 網站 Icon (使用富士山 Emoji) -->
+    <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;🗻&lt;/text&gt;&lt;/svg&gt;">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
@@ -335,879 +338,933 @@ wb);O(IMG_SEARCH_ATTRIBUTION_MAP,Pd);O(IMG_GEN_REPLACE_MAP,fa.A);X();jf();h.A=0}
     </style></head>
 <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
 
-    <!-- Hero Section -->
-    <header class="relative h-64 md:h-80 w-full overflow-hidden">
+<!-- Hero Section -->
+<header class="relative h-64 md:h-80 w-full overflow-hidden">
         <img alt="Mount Fuji Hero" class="absolute w-full h-full object-cover" src="https://assets.hldycdn.com/articles/4eeb57_d715e1d5999a47fabc3de6e665aa8cf4~mv2.webp" style="">
-        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white px-4 text-center">
-            <h1 class="text-3xl md:text-5xl font-bold mb-2 text-shadow-lg">2026 東京河口湖自由行</h1>
-            <p class="text-lg md:text-xl font-light">1月28日 - 2月1日 • 5天4夜之旅</p>
-        </div>
-    </header>
+    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white px-4 text-center">
+        <h1 class="text-3xl md:text-5xl font-bold mb-2 text-shadow-lg">2026 東京河口湖自由行</h1>
+        <p class="text-lg md:text-xl font-light">1月28日 - 2月1日 • 5天4夜之旅</p>
+    </div>
+</header>
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white shadow-md overflow-x-auto scrollbar-hide">
-        <div class="flex md:justify-center min-w-max px-4">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 bg-white shadow-md overflow-x-auto scrollbar-hide">
+    <div class="flex md:justify-center min-w-max px-4">
             <button class="nav-item active px-6 py-4 text-gray-600 hover:text-red-500 transition-colors whitespace-nowrap" onclick="switchTab('day1')">Day 1 (1/28)</button>
-            <button class="nav-item px-6 py-4 text-gray-600 hover:text-red-500 transition-colors whitespace-nowrap" onclick="switchTab('day2')">Day 2 (1/29)</button>
-            <button class="nav-item px-6 py-4 text-gray-600 hover:text-red-500 transition-colors whitespace-nowrap" onclick="switchTab('day3')">Day 3 (1/30)</button>
-            <button class="nav-item px-6 py-4 text-gray-600 hover:text-red-500 transition-colors whitespace-nowrap" onclick="switchTab('day4')">Day 4 (1/31)</button>
-            <button class="nav-item px-6 py-4 text-gray-600 hover:text-red-500 transition-colors whitespace-nowrap" onclick="switchTab('day5')">Day 5 (2/1)</button>
+        <button class="nav-item px-6 py-4 text-gray-600 hover:text-red-500 transition-colors whitespace-nowrap" onclick="switchTab('day2')">Day 2 (1/29)</button>
+        <button class="nav-item px-6 py-4 text-gray-600 hover:text-red-500 transition-colors whitespace-nowrap" onclick="switchTab('day3')">Day 3 (1/30)</button>
+        <button class="nav-item px-6 py-4 text-gray-600 hover:text-red-500 transition-colors whitespace-nowrap" onclick="switchTab('day4')">Day 4 (1/31)</button>
+        <button class="nav-item px-6 py-4 text-gray-600 hover:text-red-500 transition-colors whitespace-nowrap" onclick="switchTab('day5')">Day 5 (2/1)</button>
             <button class="nav-item px-6 py-4 text-gray-600 hover:text-red-500 transition-colors whitespace-nowrap" onclick="switchTab('info')">航班/住宿/票券</button>
-        </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Main Content -->
-    <main class="flex-grow container mx-auto px-4 py-8 max-w-5xl">
+<!-- Main Content -->
+<main class="flex-grow container mx-auto px-4 py-8 max-w-5xl">
 
-        <!-- Day 1 Content -->
+    <!-- Day 1 Content -->
         <div id="day1" class="tab-content active space-y-8 animate-fade-in">
-            <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-r shadow-sm mb-6 flex justify-between items-center">
-                <div>
-                    <h2 class="text-xl font-bold text-red-700">Day 1: 抵達東京 &amp; 上野探索</h2>
-                    <p class="text-gray-600">桃園機場 &gt; 成田機場 &gt; 上野住宿 &gt; 晚餐 &gt; 阿美橫町逛街</p>
-                </div>
-                <button onclick="switchTab('info')" class="bg-white text-red-500 text-sm px-3 py-1 rounded border border-red-200 hover:bg-red-50">
-                    查看電子票券
-                </button>
+        <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-r shadow-sm mb-6 flex justify-between items-center">
+            <div>
+                <h2 class="text-xl font-bold text-red-700">Day 1: 抵達東京 &amp; 上野探索</h2>
+                <p class="text-gray-600">桃園機場 &gt; 成田機場 &gt; 上野住宿 &gt; 晚餐 &gt; 阿美橫町逛街</p>
             </div>
+            <button onclick="switchTab('info')" class="bg-white text-red-500 text-sm px-3 py-1 rounded border border-red-200 hover:bg-red-50">
+                查看電子票券
+            </button>
+        </div>
 
-            <div class="relative pl-8 border-l-2 border-gray-200 space-y-12">
-                <!-- Flight Land -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-blue-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">flight_land</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-lg font-bold">抵達 成田機場 (NRT)</h3>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">16:45</span>
-                            </div>
-                            <div class="flex items-center justify-between mb-4">
-                                <p class="text-gray-600">中華航空 CI104 抵達 T2</p>
+        <div class="relative pl-8 border-l-2 border-gray-200 space-y-12">
+            <!-- Flight Land -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-blue-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">flight_land</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold">抵達 成田機場 (NRT)</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">16:45</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <p class="text-gray-600">中華航空 CI104 抵達 T2</p>
                                 <a href="https://zh-tw.flightaware.com/live/flight/CAL104" target="_blank" class="flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium bg-blue-50 px-3 py-1 rounded-full transition-colors">
-                                    <span class="material-symbols-outlined text-sm mr-1">radar</span> FlightAware
-                                </a>
-                            </div>
-                            <div class="bg-gray-50 p-3 rounded-lg text-sm border border-gray-200">
-                                <p class="font-semibold text-gray-700 mb-1">接駁交通：京成電鐵 Skyliner</p>
-                                <p class="text-gray-600">班次 56 (17:43) 或 58 (18:03) | 上車：成田機場 T2</p>
-                                <a href="https://www.keisei.co.jp/keisei/tetudou/skyliner/e-ticket/en/" target="_blank" class="mt-2 inline-block text-xs text-blue-600 hover:underline">Skyliner 官網購票</a>
-                            </div>
+                                <span class="material-symbols-outlined text-sm mr-1">radar</span> FlightAware
+                            </a>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded-lg text-sm border border-gray-200">
+                            <p class="font-semibold text-gray-700 mb-1">接駁交通：京成電鐵 Skyliner</p>
+                            <p class="text-gray-600">班次 56 (17:43) 或 58 (18:03) | 上車：成田機場 T2</p>
+                            <a href="https://www.keisei.co.jp/keisei/tetudou/skyliner/e-ticket/en/" target="_blank" class="mt-2 inline-block text-xs text-blue-600 hover:underline">Skyliner 官網購票</a>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Hotel Checkin -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-indigo-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">hotel</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+            <!-- Hotel Checkin -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-indigo-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">hotel</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/766955840.jpg?k=94d6a50583b825336cc28ccfe53cf5937baa8730a4efb75af6b08d7794700c81&o=" alt="Apa Hotel" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3">
-                        <div class="p-6 flex-1">
-                            <h3 class="text-xl font-bold mb-2">Apa Hotel Ueno Eki Minami</h3>
-                            <p class="text-gray-500 text-sm mb-3"><span class="material-symbols-outlined text-sm align-middle">location_on</span> 6 Chome-7-21 Ueno, Taito City</p>
-                            <p class="text-gray-600 mb-4">辦理入住手續。位於上野站附近，交通便利。</p>
-                            <div class="flex flex-wrap gap-3">
-                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Apa+Hotel+Ueno+Eki+Minami" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                    <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                                </a>
-                                <a href="https://www.google.com/travel/search?q=Apa+Hotel+Ueno+Eki+Minami" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium transition-colors">
-                                    <span class="material-symbols-outlined mr-1">bed</span> Google Hotels
-                                </a>
-                            </div>
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">Apa Hotel Ueno Eki Minami</h3>
+                        <p class="text-gray-500 text-sm mb-3"><span class="material-symbols-outlined text-sm align-middle">location_on</span> 6 Chome-7-21 Ueno, Taito City</p>
+                        <p class="text-gray-600 mb-4">辦理入住手續。位於上野站附近，交通便利。</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Apa+Hotel+Ueno+Eki+Minami" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                                <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                            </a>
+                            <a href="https://www.google.com/travel/search?q=Apa+Hotel+Ueno+Eki+Minami" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium transition-colors">
+                                <span class="material-symbols-outlined mr-1">bed</span> Google Hotels
+                            </a>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Dinner -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-orange-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">restaurant</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+            <!-- Dinner -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-orange-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">restaurant</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <img src="https://natasha-traveler.tw/wp-content/uploads/2024/10/wagyu_bouya_tokyo-21.jpg" alt="Yakiniku Booya" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3">
-                        <div class="p-6 flex-1">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-xl font-bold">晚餐：一頭牛燒肉 房家 (上野六丁目店)</h3>
-                                <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded">19:30</span>
-                            </div>
-                            <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-                                東京以「整頭購買、平價享用 A5 和牛」聞名的名店。特色是能品嚐到多種稀有部位和內臟。
-                            </p>
-                            
-                            <!-- Highlight Box -->
-                            <div class="bg-orange-50 border border-orange-200 rounded-lg p-3 text-sm mb-4">
-                                <p class="font-bold text-orange-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">restaurant_menu</span> 推薦必點</p>
-                                <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                    <li><strong>房家一頭盛 (Bouya Itto-mori)</strong>：一次品嚐多種稀有部位的拼盤。</li>
-                                    <li><strong>盛岡冷麵</strong>：Q彈有勁，燒肉後的解膩首選。</li>
-                                    <li><strong>和牛握壽司</strong>：入口即化的奢華口感。</li>
-                                </ul>
-                            </div>
-
-                            <div class="bg-gray-100 p-2 rounded text-sm text-gray-700 mb-4 text-center">
-                                預約：LIU CHUNG YU | 11大2小
-                            </div>
-                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Yakiniku+Bouya+Ueno+6-chome" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                            </a>
+                    <div class="p-6 flex-1">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">晚餐：一頭牛燒肉 房家 (上野六丁目店)</h3>
+                            <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded">19:30</span>
                         </div>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            東京以「整頭購買、平價享用 A5 和牛」聞名的名店。特色是能品嚐到多種稀有部位和內臟。
+                        </p>
+                            
+                        <!-- Highlight Box -->
+                        <div class="bg-orange-50 border border-orange-200 rounded-lg p-3 text-sm mb-4">
+                            <p class="font-bold text-orange-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">restaurant_menu</span> 推薦必點</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li><strong>房家一頭盛 (Bouya Itto-mori)</strong>：一次品嚐多種稀有部位的拼盤。</li>
+                                <li><strong>盛岡冷麵</strong>：Q彈有勁，燒肉後的解膩首選。</li>
+                                <li><strong>和牛握壽司</strong>：入口即化的奢華口感。</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gray-100 p-2 rounded text-sm text-gray-700 mb-4 text-center">
+                            預約：LIU CHUNG YU | 11大2小
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Yakiniku+Bouya+Ueno+6-chome" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                            <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Ameyoko -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-teal-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">shopping_bag</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+            <!-- Ameyoko -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-teal-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">shopping_bag</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/01/a0001014/img/basic/a0001014_main.jpg" alt="Ameyoko" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3">
-                        <div class="p-6 flex-1">
-                            <h3 class="text-xl font-bold mb-2">阿美橫町 (Ameyoko)</h3>
-                            <p class="text-gray-600 mb-4">體驗東京下町風情的熱鬧商店街，藥妝、零食、水果、小吃應有盡有。</p>
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">阿美橫町 (Ameyoko)</h3>
+                        <p class="text-gray-600 mb-4">體驗東京下町風情的熱鬧商店街，藥妝、零食、水果、小吃應有盡有。</p>
                             
-                            <!-- Highlight Box -->
-                            <div class="bg-teal-50 border border-teal-200 rounded-lg p-3 text-sm mb-4">
-                                <p class="font-bold text-teal-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">store</span> 推薦店家</p>
-                                <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                    <li><strong>二木菓子 (Niki no Kashi)</strong>：種類超齊全的伴手禮零食店，價格實惠。</li>
-                                    <li><strong>OS Drug</strong>：雖然不能退稅，但通常定價就是全東京最便宜的藥妝店。</li>
-                                    <li><strong>水果串</strong>：沿路有許多販賣哈密瓜、草莓串的攤販，新鮮好吃。</li>
-                                </ul>
-                            </div>
-
-                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Ameyoko+Shopping+District" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                            </a>
+                        <!-- Highlight Box -->
+                        <div class="bg-teal-50 border border-teal-200 rounded-lg p-3 text-sm mb-4">
+                            <p class="font-bold text-teal-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">store</span> 推薦店家</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li><strong>二木菓子 (Niki no Kashi)</strong>：種類超齊全的伴手禮零食店，價格實惠。</li>
+                                <li><strong>OS Drug</strong>：雖然不能退稅，但通常定價就是全東京最便宜的藥妝店。</li>
+                                <li><strong>水果串</strong>：沿路有許多販賣哈密瓜、草莓串的攤販，新鮮好吃。</li>
+                            </ul>
                         </div>
+
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Ameyoko+Shopping+District" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                            <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Day 2 Content -->
-        <div id="day2" class="tab-content space-y-8 animate-fade-in">
-            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r shadow-sm mb-6 flex justify-between items-center">
-                <div>
-                    <h2 class="text-xl font-bold text-blue-700">Day 2: 富士河口湖絕景</h2>
-                    <p class="text-gray-600">包車遊覽 &gt; 天上山公園 &gt; 羅森打卡 &gt; 忍野八海 &gt; 河口湖住宿</p>
-                    <div class="mt-2 text-sm text-blue-600 flex items-center">
-                        <span class="material-symbols-outlined text-sm mr-1">directions_car</span> 包車：株式会社大寅 (09:00 上野出發)
-                    </div>
+    <!-- Day 2 Content -->
+    <div id="day2" class="tab-content space-y-8 animate-fade-in">
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r shadow-sm mb-6 flex justify-between items-center">
+            <div>
+                <h2 class="text-xl font-bold text-blue-700">Day 2: 富士河口湖絕景</h2>
+                <p class="text-gray-600">包車遊覽 &gt; 天上山公園 &gt; 羅森打卡 &gt; 忍野八海 &gt; 河口湖住宿</p>
+                <div class="mt-2 text-sm text-blue-600 flex items-center">
+                    <span class="material-symbols-outlined text-sm mr-1">directions_car</span> 包車：株式会社大寅 (09:00 上野出發)
                 </div>
-                <button onclick="switchTab('info')" class="bg-white text-blue-500 text-sm px-3 py-1 rounded border border-blue-200 hover:bg-blue-50">
-                    查看電子票券
-                </button>
             </div>
+            <button onclick="switchTab('info')" class="bg-white text-blue-500 text-sm px-3 py-1 rounded border border-blue-200 hover:bg-blue-50">
+                查看電子票券
+            </button>
+        </div>
 
-            <div class="relative pl-8 border-l-2 border-gray-200 space-y-12">
-                <!-- Tenjo-yama -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-green-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">landscape</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+        <div class="relative pl-8 border-l-2 border-gray-200 space-y-12">
+            <!-- Tenjo-yama -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-green-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">landscape</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiOG4kb7EF6QIqbM4NbNxEuJ0GamkRD020dIGcEzLYPuu2HHVj5kiTqGBC5iN3Nsd3-QKcagbOHTpbVcievQIypDbeItrsIFU-Q5k9c9hdaNWxOy3ejbRqSaWo-WnpYZa0FHB9PqqyZKNmD/s1600/DSC07577-7.jpg" alt="Tenjo-yama" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3">
-                        <div class="p-6 flex-1">
-                            <h3 class="text-xl font-bold mb-2">天上山公園 / 河口湖纜車</h3>
-                            <p class="text-gray-600 mb-4 leading-relaxed">
-                                眺望富士山與河口湖全景的絕佳觀景點。山頂的「狸貓茶屋」也是人氣景點。
-                            </p>
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">天上山公園 / 河口湖纜車</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            眺望富士山與河口湖全景的絕佳觀景點。山頂的「狸貓茶屋」也是人氣景點。
+                        </p>
                             
-                            <!-- Highlight Box -->
-                            <div class="bg-green-50 border border-green-200 rounded-lg p-3 text-sm mb-4">
-                                <p class="font-bold text-green-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">icecream</span> 必吃與必看</p>
-                                <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                    <li><strong>狸貓糰子 (Tanuki Dango)</strong>：上面印有富士山圖案的炭烤糰子，鹹甜醬油味。</li>
-                                    <li><strong>天上之鐘</strong>：與富士山同框的愛心鐘，戀人聖地。</li>
-                                    <li><strong>兔子神社</strong>：祈求健腳和智慧的神社。</li>
-                                </ul>
-                            </div>
+                        <!-- Highlight Box -->
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-3 text-sm mb-4">
+                            <p class="font-bold text-green-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">icecream</span> 必吃與必看</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li><strong>狸貓糰子 (Tanuki Dango)</strong>：上面印有富士山圖案的炭烤糰子，鹹甜醬油味。</li>
+                                <li><strong>天上之鐘</strong>：與富士山同框的愛心鐘，戀人聖地。</li>
+                                <li><strong>兔子神社</strong>：祈求健腳和智慧的神社。</li>
+                            </ul>
+                        </div>
 
-                            <div class="flex gap-3">
-                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Mt.+Fuji+Panoramic+Ropeway" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                    <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                                </a>
-                                <a href="https://www.mtfujiropeway.jp/en/" target="_blank" class="inline-flex items-center text-green-600 hover:text-green-800 font-medium transition-colors">
-                                    <span class="material-symbols-outlined mr-1">confirmation_number</span> 購票詳情
-                                </a>
-                            </div>
+                        <div class="flex gap-3">
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Mt.+Fuji+Panoramic+Ropeway" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                                <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                            </a>
+                            <a href="https://www.mtfujiropeway.jp/en/" target="_blank" class="inline-flex items-center text-green-600 hover:text-green-800 font-medium transition-colors">
+                                <span class="material-symbols-outlined mr-1">confirmation_number</span> 購票詳情
+                            </a>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Lawson -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-blue-400 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">photo_camera</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+            <!-- Lawson -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-blue-400 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">photo_camera</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <img src="https://images.gowithguide.com/filters:format(avif)/filters:strip_exif()/fit-in/1024x1024/filters:quality(50)/gowithguide/tours/17059/5e4ed1bd-5277-47d5-8eef-959aaedfc606.jpg" alt="Lawson Photo Spot" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3">
-                        <div class="p-6 flex-1">
-                            <h3 class="text-xl font-bold mb-2">羅森便利商店 (富士河口湖町公所前店)</h3>
-                            <p class="text-gray-600 mb-4">
-                                小紅書熱門打卡點！藍白相間的羅森標誌與背後壯麗的富士山完美結合。
-                            </p>
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">羅森便利商店 (富士河口湖町公所前店)</h3>
+                        <p class="text-gray-600 mb-4">
+                            小紅書熱門打卡點！藍白相間的羅森標誌與背後壯麗的富士山完美結合。
+                        </p>
                             
-                            <!-- Highlight Box -->
-                            <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm mb-4">
-                                <p class="font-bold text-blue-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1 js-replaced-missing-icon">radio_button_unchecked</span> 拍照 Tips</p>
-                                <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                    <li>推薦購買 <strong>炸雞君 (Karage-kun)</strong> 或 <strong>Lawson 咖啡</strong> 當作拍照道具。</li>
-                                    <li>建議過馬路到對面的人行道，才能拍出經典的標誌與富士山疊加效果。</li>
-                                </ul>
-                            </div>
-
-                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Lawson+Fujikawaguchiko+Town+Hall" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                            </a>
+                        <!-- Highlight Box -->
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm mb-4">
+                            <p class="font-bold text-blue-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1 js-replaced-missing-icon">radio_button_unchecked</span> 拍照 Tips</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>推薦購買 <strong>炸雞君 (Karage-kun)</strong> 或 <strong>Lawson 咖啡</strong> 當作拍照道具。</li>
+                                <li>建議過馬路到對面的人行道，才能拍出經典的標誌與富士山疊加效果。</li>
+                            </ul>
                         </div>
+
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Lawson+Fujikawaguchiko+Town+Hall" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                            <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Lunch -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-orange-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">soup_kitchen</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+            <!-- Lunch -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-orange-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">soup_kitchen</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWcMN6rEOCA2jTRYAXqMx6Wg6sD5ZXTA2vcOeA9s3R1E84PfZtokz9apD_QLb4SzV2XQFU_QX9Xq66KDacpgOI_n1RG3G8Qw3oMBOVHkPl-QwnCQWyzcw8pWqetLFtg4AGaXbRZm7_xLA/s1600/fuji_2018-2.jpg" alt="Hoto Kosaku" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3">
-                        <div class="p-6 flex-1">
-                            <h3 class="text-xl font-bold mb-2">中餐：甲州餺飥小作 (河口湖店)</h3>
-                            <p class="text-gray-600 mb-4 leading-relaxed">
-                                山梨縣最具代表性的鄉土料理名店。寬大厚實的手工麵條與大量蔬菜燉煮，溫暖又飽足。
-                            </p>
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">中餐：甲州餺飥小作 (河口湖店)</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            山梨縣最具代表性的鄉土料理名店。寬大厚實的手工麵條與大量蔬菜燉煮，溫暖又飽足。
+                        </p>
                             
-                             <!-- Highlight Box -->
-                             <div class="bg-orange-50 border border-orange-200 rounded-lg p-3 text-sm mb-4">
-                                <p class="font-bold text-orange-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">recommend</span> 招牌必點</p>
-                                <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                    <li><strong>熟瓜餺飥 (Kabocha Hoto)</strong>：店內人氣 No.1，擁有濃郁香甜的南瓜味噌湯底。</li>
-                                    <li><strong>豬肉餺飥 (Butaniku Hoto)</strong>：喜歡肉香味的人推薦這款。</li>
-                                    <li><strong>生馬肉 (Basashi)</strong>：山梨縣特產，口感像生魚片般鮮嫩，值得一試。</li>
-                                </ul>
-                            </div>
-
-                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Hoto+Kosaku+Kawaguchiko" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                            </a>
+                        <!-- Highlight Box -->
+                        <div class="bg-orange-50 border border-orange-200 rounded-lg p-3 text-sm mb-4">
+                            <p class="font-bold text-orange-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">recommend</span> 招牌必點</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li><strong>熟瓜餺飥 (Kabocha Hoto)</strong>：店內人氣 No.1，擁有濃郁香甜的南瓜味噌湯底。</li>
+                                <li><strong>豬肉餺飥 (Butaniku Hoto)</strong>：喜歡肉香味的人推薦這款。</li>
+                                <li><strong>生馬肉 (Basashi)</strong>：山梨縣特產，口感像生魚片般鮮嫩，值得一試。</li>
+                            </ul>
                         </div>
+
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Hoto+Kosaku+Kawaguchiko" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                            <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Oshino Hakkai -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-cyan-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">water_drop</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+            <!-- Oshino Hakkai -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-cyan-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">water_drop</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <img src="https://www.japan-travel.cn/sports/jnto/image/upload/w_2064,h_1300,f_auto,fl_lossy,q_auto,c_fill/v1/media/filer_public/98/1b/981b6295-4597-43ab-a1f8-87e12725ae32/oshino-hakkai-kv_bzvsix" alt="Oshino Hakkai" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3">
-                        <div class="p-6 flex-1">
-                            <h3 class="text-xl font-bold mb-2">忍野八海</h3>
-                            <p class="text-gray-600 mb-4 leading-relaxed">
-                                由富士山融雪過濾而成的八個清澈池塘。池水如鏡，倒映著富士山。
-                            </p>
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">忍野八海</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            由富士山融雪過濾而成的八個清澈池塘。池水如鏡，倒映著富士山。
+                        </p>
                             
-                            <!-- Highlight Box -->
-                            <div class="bg-cyan-50 border border-cyan-200 rounded-lg p-3 text-sm mb-4">
-                                <p class="font-bold text-cyan-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">bakery_dining</span> 散步美食</p>
-                                <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                    <li><strong>現烤草餅 (Kusa-mochi)</strong>：綠色的艾草麻糬，內包紅豆餡，烤得熱熱的非常美味。</li>
-                                    <li><strong>名水豆腐</strong>：使用富士山泉水製作的豆腐，淋上特製辣味噌享用。</li>
-                                </ul>
-                            </div>
-
-                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Oshino+Hakkai" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                            </a>
+                        <!-- Highlight Box -->
+                        <div class="bg-cyan-50 border border-cyan-200 rounded-lg p-3 text-sm mb-4">
+                            <p class="font-bold text-cyan-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">bakery_dining</span> 散步美食</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li><strong>現烤草餅 (Kusa-mochi)</strong>：綠色的艾草麻糬，內包紅豆餡，烤得熱熱的非常美味。</li>
+                                <li><strong>名水豆腐</strong>：使用富士山泉水製作的豆腐，淋上特製辣味噌享用。</li>
+                            </ul>
                         </div>
+
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Oshino+Hakkai" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                            <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Hotel -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-indigo-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">hotel</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+            <!-- Hotel -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-indigo-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">hotel</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <img src="https://pimg.1px.tw/sherrylian1025/1493733305-1617095075.jpg" alt="Tominoko Hotel" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3">
-                        <div class="p-6 flex-1">
-                            <h3 class="text-xl font-bold mb-2">住宿：富之湖酒店 (Tominoko Hotel)</h3>
-                            <p class="text-gray-500 text-sm mb-2"><span class="material-symbols-outlined text-sm align-middle">location_on</span> 55 Azagawa, Fujikawaguchiko</p>
-                            <p class="text-gray-600 mb-4">晚餐：18:00 | 早餐：07:00</p>
-                            <div class="flex flex-wrap gap-3">
-                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Tominoko+Hotel" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                    <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                                </a>
-                                <a href="https://www.google.com/travel/search?q=Tominoko+Hotel+Kawaguchiko" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium transition-colors">
-                                    <span class="material-symbols-outlined mr-1">bed</span> Google Hotels
-                                </a>
-                            </div>
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">住宿：富之湖酒店 (Tominoko Hotel)</h3>
+                        <p class="text-gray-500 text-sm mb-2"><span class="material-symbols-outlined text-sm align-middle">location_on</span> 55 Azagawa, Fujikawaguchiko</p>
+                        <p class="text-gray-600 mb-4">晚餐：18:00 | 早餐：07:00</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Tominoko+Hotel" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                                <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                            </a>
+                            <a href="https://www.google.com/travel/search?q=Tominoko+Hotel+Kawaguchiko" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium transition-colors">
+                                <span class="material-symbols-outlined mr-1">bed</span> Google Hotels
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Day 3 Content -->
-        <div id="day3" class="tab-content space-y-8 animate-fade-in">
-            <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r shadow-sm mb-6 flex justify-between items-center">
-                <div>
-                    <h2 class="text-xl font-bold text-purple-700">Day 3: 經典富士與返回東京</h2>
-                    <p class="text-gray-600">產屋崎 &gt; 新倉山淺間神社 &gt; 吉田懷舊街道 &gt; 遊覽船 &gt; 台場</p>
-                    <div class="mt-2 text-sm text-purple-600 flex items-center">
-                        <span class="material-symbols-outlined text-sm mr-1">directions_car</span> 包車：株式会社大寅 (10:00 酒店出發)
-                    </div>
+    <!-- Day 3 Content -->
+    <div id="day3" class="tab-content space-y-8 animate-fade-in">
+        <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r shadow-sm mb-6 flex justify-between items-center">
+            <div>
+                <h2 class="text-xl font-bold text-purple-700">Day 3: 經典富士與返回東京</h2>
+                <p class="text-gray-600">產屋崎 &gt; 新倉山淺間神社 &gt; 吉田懷舊街道 &gt; 遊覽船 &gt; 台場</p>
+                <div class="mt-2 text-sm text-purple-600 flex items-center">
+                    <span class="material-symbols-outlined text-sm mr-1">directions_car</span> 包車：株式会社大寅 (10:00 酒店出發)
                 </div>
-                <button onclick="switchTab('info')" class="bg-white text-purple-500 text-sm px-3 py-1 rounded border border-purple-200 hover:bg-purple-50">
-                    查看電子票券
-                </button>
             </div>
+            <button onclick="switchTab('info')" class="bg-white text-purple-500 text-sm px-3 py-1 rounded border border-purple-200 hover:bg-purple-50">
+                查看電子票券
+            </button>
+        </div>
 
-            <div class="relative pl-8 border-l-2 border-gray-200 space-y-12">
-                <!-- Ubuyagasaki -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-purple-400 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow js-replaced-missing-icon">radio_button_unchecked</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+        <div class="relative pl-8 border-l-2 border-gray-200 space-y-12">
+            <!-- Ubuyagasaki -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-purple-400 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow js-replaced-missing-icon">radio_button_unchecked</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <div class="dyn-img-link-wrapper-di-script" style="border-radius: 0px;"><img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTjFRYwvl-bgKflo6Tze1V6AM4c0nDZz-SmEBqzGUiOBuXSHtu2XpX_CGjQ5667RDLI8aH5lDARD2_cLVs" alt="Ubuyagasaki" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3"><button class="dyn-img-attribution-button-di-script" title="Image Attribution" style="display: flex;"><span class="material-symbols-outlined">open_in_full</span></button><span class="dyn-img-inline-attribution-di-script" style="display: none;">Shin Okamoto/Getty Images</span></div>
-                        <div class="p-6 flex-1">
-                            <h3 class="text-xl font-bold mb-2">產屋ヶ崎 (Ubuyagasaki)</h3>
-                            <p class="text-gray-600 mb-4">河口湖著名的「逆富士」拍攝點。早晨風平浪靜時最容易拍到倒影。</p>
-                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Ubuyagasaki+Shrine" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                            </a>
-                        </div>
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">產屋ヶ崎 (Ubuyagasaki)</h3>
+                        <p class="text-gray-600 mb-4">河口湖著名的「逆富士」拍攝點。早晨風平浪靜時最容易拍到倒影。</p>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Ubuyagasaki+Shrine" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                            <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Chureito Pagoda -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-red-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">temple_buddhist</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+            <!-- Chureito Pagoda -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-red-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">temple_buddhist</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <img src="https://res.klook.com/image/upload/w_500,h_313,c_fill,q_85/activities/iuqnww3unmcff9wf1zvx.jpg" alt="Chureito Pagoda" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3">
-                        <div class="p-6 flex-1">
-                            <h3 class="text-xl font-bold mb-2">新倉山淺間神社 (忠靈塔)</h3>
-                            <p class="text-gray-600 mb-4 leading-relaxed">
-                                攀登 397 個台階後，即可飽覽「五重塔 + 富士山」的明信片級絕景。
-                            </p>
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">新倉山淺間神社 (忠靈塔)</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            攀登 397 個台階後，即可飽覽「五重塔 + 富士山」的明信片級絕景。
+                        </p>
                             
-                             <!-- Highlight Box -->
-                             <div class="bg-red-50 border border-red-200 rounded-lg p-3 text-sm mb-4">
-                                <p class="font-bold text-red-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">photo_camera</span> 拍攝亮點</p>
-                                <p class="text-gray-700">一定要走到忠靈塔後方的展望台，這是唯一能同時拍到紅色五重塔與完整富士山構圖的角度。</p>
-                            </div>
-
-                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Arakurayama+Sengen+Park" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                            </a>
+                        <!-- Highlight Box -->
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-3 text-sm mb-4">
+                            <p class="font-bold text-red-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">photo_camera</span> 拍攝亮點</p>
+                            <p class="text-gray-700">一定要走到忠靈塔後方的展望台，這是唯一能同時拍到紅色五重塔與完整富士山構圖的角度。</p>
                         </div>
+
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Arakurayama+Sengen+Park" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                            <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Shimoyoshida Street -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-gray-600 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">streetview</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+            <!-- Shimoyoshida Street -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-gray-600 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">streetview</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <div class="dyn-img-link-wrapper-di-script" style="border-radius: 0px;"><img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQIKn0IPp5RKgAYERXrNEgMiMWmy0l0lvK3cxWHwUcQrGKM3LHV4Qh8jxs6Fse1gQJf6FiBYwbOt0yAbQA" go-data-src="/image?query=Shimoyoshida+Honcho+Street+Mount+Fuji+view&amp;aspect=4:3" alt="Shimoyoshida Street" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3"><button class="dyn-img-attribution-button-di-script" title="Image Attribution" style="display: flex;"><span class="material-symbols-outlined">open_in_full</span></button><span class="dyn-img-inline-attribution-di-script" style="display: none;">Maximilian Müller/Getty Images</span></div>
-                        <div class="p-6 flex-1">
-                            <h3 class="text-xl font-bold mb-2">富士吉田 懷舊商店街 (日川時計店)</h3>
-                            <p class="text-gray-600 mb-4">
-                                網紅拍照聖地。昭和風情的商店街盡頭正對著巨大的富士山，充滿視覺衝擊力。
-                            </p>
-                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Shimoyoshida+Honcho+Street" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                            </a>
-                        </div>
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">富士吉田 懷舊商店街 (日川時計店)</h3>
+                        <p class="text-gray-600 mb-4">
+                            網紅拍照聖地。昭和風情的商店街盡頭正對著巨大的富士山，充滿視覺衝擊力。
+                        </p>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Shimoyoshida+Honcho+Street" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                            <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Boat -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-blue-600 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">directions_boat</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+            <!-- Boat -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-blue-600 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">directions_boat</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <img src="https://www.fujigokokisen.jp/up_img/news/Pz3jaXR1erJT/2025081910104001.jpg" alt="Appare Boat" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3">
-                        <div class="p-6 flex-1">
-                            <h3 class="text-xl font-bold mb-2">河口湖遊覽船「天晴」</h3>
-                            <p class="text-gray-600 mb-4">
-                                以戰國武田軍戰船為主題的遊覽船。在開放式甲板上近距離欣賞富士山美景，感受湖面微風。
-                            </p>
-                            <div class="flex gap-3">
-                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Kawaguchiko+Sightseeing+Boat+Appare" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                    <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                                </a>
-                                <a href="https://www.gltjp.com/en/directory/item/12079/" target="_blank" class="inline-flex items-center text-green-600 hover:text-green-800 font-medium transition-colors">
-                                    <span class="material-symbols-outlined mr-1">confirmation_number</span> 購票詳情
-                                </a>
-                            </div>
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">河口湖遊覽船「天晴」</h3>
+                        <p class="text-gray-600 mb-4">
+                            以戰國武田軍戰船為主題的遊覽船。在開放式甲板上近距離欣賞富士山美景，感受湖面微風。
+                        </p>
+                        <div class="flex gap-3">
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Kawaguchiko+Sightseeing+Boat+Appare" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                                <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                            </a>
+                            <a href="https://www.gltjp.com/en/directory/item/12079/" target="_blank" class="inline-flex items-center text-green-600 hover:text-green-800 font-medium transition-colors">
+                                <span class="material-symbols-outlined mr-1">confirmation_number</span> 購票詳情
+                            </a>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Dinner Tokyo -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-orange-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">ramen_dining</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+            <!-- Dinner Tokyo -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-orange-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">ramen_dining</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <div class="dyn-img-link-wrapper-di-script" style="border-radius: 0px;"><img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcR3WuKg-7azEnbAtf9eTBtl8o-vvGCsQjT3Dz3LcCXy5N4wJpfBVVgk-YvWR5h3E6M5J1BxIRRWiqyMI0U" go-data-src="/image?query=Tokyo+Ramen+Kokugikan+Mai+Odaiba&amp;aspect=4:3" alt="Ramen Kokugikan" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3"><button class="dyn-img-attribution-button-di-script" title="Image Attribution" style="display: flex;"><span class="material-symbols-outlined">open_in_full</span></button><span class="dyn-img-inline-attribution-di-script" style="display: none;">Tuayai/Getty Images</span></div>
-                        <div class="p-6 flex-1">
-                            <h3 class="text-xl font-bold mb-2">晚餐：東京拉麵國技館 (台場)</h3>
-                            <p class="text-gray-600 mb-4">
-                                位於 AQUA CiTY ODAIBA 5樓，匯集了來自日本各地的六家精選拉麵名店，一次品嚐多種地方風味。
-                            </p>
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">晚餐：東京拉麵國技館 (台場)</h3>
+                        <p class="text-gray-600 mb-4">
+                            位於 AQUA CiTY ODAIBA 5樓，匯集了來自日本各地的六家精選拉麵名店，一次品嚐多種地方風味。
+                        </p>
 
-                            <!-- Highlight Box -->
-                            <div class="bg-orange-50 border border-orange-200 rounded-lg p-3 text-sm mb-4">
-                                <p class="font-bold text-orange-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">recommend</span> 推薦名店</p>
-                                <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                    <li><strong>金澤濃厚豚骨拉麵 神仙</strong>：超濃郁的豚骨醬油湯頭，重口味愛好者首選。</li>
-                                    <li><strong>世田谷 (Setagaya)</strong>：魚介系湯頭的代表，香氣層次豐富。</li>
-                                </ul>
-                            </div>
-
-                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Tokyo+Ramen+Kokugikan+Mai" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                            </a>
+                        <!-- Highlight Box -->
+                        <div class="bg-orange-50 border border-orange-200 rounded-lg p-3 text-sm mb-4">
+                            <p class="font-bold text-orange-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">recommend</span> 推薦名店</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li><strong>金澤濃厚豚骨拉麵 神仙</strong>：超濃郁的豚骨醬油湯頭，重口味愛好者首選。</li>
+                                <li><strong>世田谷 (Setagaya)</strong>：魚介系湯頭的代表，香氣層次豐富。</li>
+                            </ul>
                         </div>
+
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Tokyo+Ramen+Kokugikan+Mai" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                            <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Hotel Tokyo -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-indigo-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">hotel</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+            <!-- Hotel Tokyo -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-indigo-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">hotel</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <img src="https://sotetsu-hotels.com/grand-fresa/datas/images/2022/01/04/58eb81111ce7aa11f45a9d9b7d23a206e7667cd5.jpg" alt="Sotetsu Grand Fresa" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3">
-                        <div class="p-6 flex-1">
-                            <h3 class="text-xl font-bold mb-2">住宿：東京灣有明相鐵 GRAND FRESA</h3>
-                            <p class="text-gray-500 text-sm mb-2"><span class="material-symbols-outlined text-sm align-middle">location_on</span> 3 Chome-6-6 Ariake, Koto City</p>
-                            <p class="text-gray-600 mb-4">早餐：06:45</p>
-                            <div class="flex flex-wrap gap-3">
-                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Sotetsu+Grand+Fresa+Tokyo-Bay+Ariake" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                    <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                                </a>
-                                <a href="https://www.google.com/travel/search?q=Sotetsu+Grand+Fresa+Tokyo+Bay+Ariake" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium transition-colors">
-                                    <span class="material-symbols-outlined mr-1">bed</span> Google Hotels
-                                </a>
-                            </div>
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">住宿：東京灣有明相鐵 GRAND FRESA</h3>
+                        <p class="text-gray-500 text-sm mb-2"><span class="material-symbols-outlined text-sm align-middle">location_on</span> 3 Chome-6-6 Ariake, Koto City</p>
+                        <p class="text-gray-600 mb-4">早餐：06:45</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Sotetsu+Grand+Fresa+Tokyo-Bay+Ariake" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                                <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                            </a>
+                            <a href="https://www.google.com/travel/search?q=Sotetsu+Grand+Fresa+Tokyo+Bay+Ariake" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium transition-colors">
+                                <span class="material-symbols-outlined mr-1">bed</span> Google Hotels
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Day 4 Content -->
-        <div id="day4" class="tab-content space-y-8 animate-fade-in">
-            <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded-r shadow-sm mb-6 flex justify-between items-center">
-                <div>
-                    <h2 class="text-xl font-bold text-indigo-700">Day 4: 東京水岸與傳統風情</h2>
-                    <p class="text-gray-600">築地市場 &gt; 淺草寺 &gt; 水上巴士 &gt; 台場購物</p>
-                </div>
-                <button onclick="switchTab('info')" class="bg-white text-indigo-500 text-sm px-3 py-1 rounded border border-indigo-200 hover:bg-indigo-50">
-                    查看電子票券
-                </button>
+    <!-- Day 4 Content -->
+    <div id="day4" class="tab-content space-y-8 animate-fade-in">
+        <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded-r shadow-sm mb-6 flex justify-between items-center">
+            <div>
+                <h2 class="text-xl font-bold text-indigo-700">Day 4: 東京水岸與傳統風情</h2>
+                <p class="text-gray-600">築地市場 &gt; 淺草寺 &gt; 水上巴士 &gt; 台場購物</p>
             </div>
+            <button onclick="switchTab('info')" class="bg-white text-indigo-500 text-sm px-3 py-1 rounded border border-indigo-200 hover:bg-indigo-50">
+                查看電子票券
+            </button>
+        </div>
 
-            <div class="relative pl-8 border-l-2 border-gray-200 space-y-12">
-                <!-- Tsukiji -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-red-400 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">set_meal</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+        <div class="relative pl-8 border-l-2 border-gray-200 space-y-12">
+            <!-- Tsukiji -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-red-400 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">set_meal</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <img src="https://www.nippon.com/hk/ncommon/contents/guide-to-japan/413217/413217.jpg" alt="Tsukiji Market" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3">
-                        <div class="p-6 flex-1">
-                            <h3 class="text-xl font-bold mb-2">築地場外市場</h3>
-                            <p class="text-gray-600 mb-4 leading-relaxed">
-                                日本傳統「食之町」。約460家商店，提供最新鮮的海鮮丼、玉子燒、和牛串燒等美食。
-                            </p>
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">築地場外市場</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            日本傳統「食之町」。約460家商店，提供最新鮮的海鮮丼、玉子燒、和牛串燒等美食。
+                        </p>
                             
-                            <!-- Highlight Box -->
-                            <div class="bg-red-50 border border-red-200 rounded-lg p-3 text-sm mb-4">
-                                <p class="font-bold text-red-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">star</span> 排隊名店</p>
-                                <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                    <li><strong>山長玉子燒 / 丸武玉子燒</strong>：現做的熱騰騰玉子燒串，甜味適中。</li>
-                                    <li><strong>狐狸屋 (Kitsuneya)</strong>：婆婆煮的牛雜丼 (Hormone Don)，味道濃厚，需站立食用。</li>
-                                    <li><strong>草莓大福</strong>：市場內隨處可見，使用當季新鮮草莓，非常適合當飯後甜點。</li>
-                                </ul>
-                            </div>
-
-                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Tsukiji+Outer+Market" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                            </a>
+                        <!-- Highlight Box -->
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-3 text-sm mb-4">
+                            <p class="font-bold text-red-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">star</span> 排隊名店</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li><strong>山長玉子燒 / 丸武玉子燒</strong>：現做的熱騰騰玉子燒串，甜味適中。</li>
+                                <li><strong>狐狸屋 (Kitsuneya)</strong>：婆婆煮的牛雜丼 (Hormone Don)，味道濃厚，需站立食用。</li>
+                                <li><strong>草莓大福</strong>：市場內隨處可見，使用當季新鮮草莓，非常適合當飯後甜點。</li>
+                            </ul>
                         </div>
+
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Tsukiji+Outer+Market" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                            <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Sensoji -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-red-600 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">temple_hindu</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+            <!-- Sensoji -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-red-600 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">temple_hindu</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <img src="https://i0.wp.com/susandalzell.com/wp-content/uploads/2014/10/img_2616.jpg?w=4000&h=&ssl=1" alt="Sensoji" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3">
-                        <div class="p-6 flex-1">
-                            <h3 class="text-xl font-bold mb-2">雷門 淺草寺</h3>
-                            <p class="text-gray-600 mb-4 leading-relaxed">
-                                東京最古老的寺院。巨大的「雷門」紅燈籠是其標誌。仲見世通商店街販售人形燒與傳統工藝品。
-                            </p>
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold mb-2">雷門 淺草寺</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            東京最古老的寺院。巨大的「雷門」紅燈籠是其標誌。仲見世通商店街販售人形燒與傳統工藝品。
+                        </p>
                             
-                            <!-- Highlight Box -->
-                            <div class="bg-red-50 border border-red-200 rounded-lg p-3 text-sm mb-4">
-                                <p class="font-bold text-red-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">storefront</span> 仲見世通必吃</p>
-                                <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                    <li><strong>花月堂菠蘿麵包</strong>：外酥內軟，超級巨大的菠蘿麵包。</li>
-                                    <li><strong>木村家人形燒</strong>：淺草最古老的人形燒店，造型可愛。</li>
-                                    <li><strong>淺草炸肉餅 (Asakusa Menchi)</strong>：肉汁豐富的炸肉餅，請小心燙口。</li>
-                                </ul>
-                            </div>
-
-                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Sensoji+Temple" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                            </a>
+                        <!-- Highlight Box -->
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-3 text-sm mb-4">
+                            <p class="font-bold text-red-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">storefront</span> 仲見世通必吃</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li><strong>花月堂菠蘿麵包</strong>：外酥內軟，超級巨大的菠蘿麵包。</li>
+                                <li><strong>木村家人形燒</strong>：淺草最古老的人形燒店，造型可愛。</li>
+                                <li><strong>淺草炸肉餅 (Asakusa Menchi)</strong>：肉汁豐富的炸肉餅，請小心燙口。</li>
+                            </ul>
                         </div>
+
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Sensoji+Temple" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                            <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Water Bus -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-blue-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">directions_boat</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+            <!-- Water Bus -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-blue-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">directions_boat</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
                         <div class="dyn-img-link-wrapper-di-script" style="border-radius: 0px;"><img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRSyAq_tPAx1UoURK5CIuvIziNSvQJtL3VzO3ZXdM9p-zs-uStBU0CH09V0L2R78I8Lxgv4uokwVkPo4Mg" go-data-src="/image?query=Tokyo+Cruise+Emeraldas+boat+Sumida+River&amp;aspect=4:3" alt="Emeraldas Water Bus" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3" style="aspect-ratio: 4/3"><button class="dyn-img-attribution-button-di-script" title="Image Attribution" style="display: flex;"><span class="material-symbols-outlined">open_in_full</span></button><span class="dyn-img-inline-attribution-di-script" style="display: none;">chris-mueller/Getty Images</span></div>
-                        <div class="p-6 flex-1">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-xl font-bold">東京水邊線水上巴士 (Emeraldas)</h3>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">16:10</span>
-                            </div>
-                            <p class="text-gray-600 mb-4">
-                                現代感十足的觀光船，連結淺草與台場。沿途欣賞晴空塔、彩虹橋與隅田川風光。
-                            </p>
-                            <div class="flex gap-3">
-                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Tokyo+Cruise+Asakusa+Pier" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                                    <span class="material-symbols-outlined mr-1">map</span> Google Maps
-                                </a>
-                                <a href="https://www.suijobus.co.jp/en/" target="_blank" class="inline-flex items-center text-green-600 hover:text-green-800 font-medium transition-colors">
-                                    <span class="material-symbols-outlined mr-1">confirmation_number</span> 官網訂票
-                                </a>
-                            </div>
+                    <div class="p-6 flex-1">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">東京水邊線水上巴士 (Emeraldas)</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">16:10</span>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Dinner Odaiba -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-orange-600 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">restaurant_menu</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
-                        <img src="https://cdn.peraichi.com/userData/10449a90-55e4-4bce-9f00-42d0ff957c5e/img/4e248f30-5bcb-013e-e7ff-0a58a9feac02/%E5%B9%B3%E5%9F%8E%E8%8B%91%E6%B5%85%E8%8D%89.jpg" alt="Heijoen Yakiniku" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3">
-                        <div class="p-6 flex-1">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-xl font-bold">晚餐：平城苑 (AquaCity台場店)</h3>
-                                <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded">18:00</span>
-                            </div>
-                            <p class="text-gray-600 mb-4">
-                                歷史悠久的高級燒肉店，嚴選 A5 黑毛和牛「整頭採購」。環境典雅，可欣賞台場夜景。
-                            </p>
-                             
-                             <!-- Highlight Box -->
-                             <div class="bg-orange-50 border border-orange-200 rounded-lg p-3 text-sm mb-4">
-                                <p class="font-bold text-orange-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">thumb_up</span> 店長推薦</p>
-                                <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                    <li><strong>和牛拼盤</strong>：一次品嚐不同部位的 A5 黑毛和牛。</li>
-                                    <li><strong>特選牛舌</strong>：厚切多汁，口感極佳。</li>
-                                </ul>
-                            </div>
-
-                            <div class="bg-gray-100 p-2 rounded text-sm text-gray-700 mb-4 text-center">
-                                預約：LIU CHUNG YU | 11大2小
-                            </div>
-                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Heijoen+Aqua+City+Odaiba" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                        <p class="text-gray-600 mb-4">
+                            現代感十足的觀光船，連結淺草與台場。沿途欣賞晴空塔、彩虹橋與隅田川風光。
+                        </p>
+                        <div class="flex gap-3">
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Tokyo+Cruise+Asakusa+Pier" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
                                 <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                            </a>
+                            <a href="https://www.suijobus.co.jp/en/" target="_blank" class="inline-flex items-center text-green-600 hover:text-green-800 font-medium transition-colors">
+                                <span class="material-symbols-outlined mr-1">confirmation_number</span> 官網訂票
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Dinner Odaiba -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-orange-600 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">restaurant_menu</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+                        <img src="https://cdn.peraichi.com/userData/10449a90-55e4-4bce-9f00-42d0ff957c5e/img/4e248f30-5bcb-013e-e7ff-0a58a9feac02/%E5%B9%B3%E5%9F%8E%E8%8B%91%E6%B5%85%E8%8D%89.jpg" alt="Heijoen Yakiniku" class="w-full md:w-1/3 h-48 object-cover" style="aspect-ratio: 4/3">
+                    <div class="p-6 flex-1">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">晚餐：平城苑 (AquaCity台場店)</h3>
+                            <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded">18:00</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            歷史悠久的高級燒肉店，嚴選 A5 黑毛和牛「整頭採購」。環境典雅，可欣賞台場夜景。
+                        </p>
+                             
+                        <!-- Highlight Box -->
+                        <div class="bg-orange-50 border border-orange-200 rounded-lg p-3 text-sm mb-4">
+                            <p class="font-bold text-orange-800 flex items-center mb-1"><span class="material-symbols-outlined text-base mr-1">thumb_up</span> 店長推薦</p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li><strong>和牛拼盤</strong>：一次品嚐不同部位的 A5 黑毛和牛。</li>
+                                <li><strong>特選牛舌</strong>：厚切多汁，口感極佳。</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gray-100 p-2 rounded text-sm text-gray-700 mb-4 text-center">
+                            預約：LIU CHUNG YU | 11大2小
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Heijoen+Aqua+City+Odaiba" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                            <span class="material-symbols-outlined mr-1">map</span> Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Day 5 Content -->
+    <div id="day5" class="tab-content space-y-8 animate-fade-in">
+        <div class="bg-gray-100 border-l-4 border-gray-500 p-4 rounded-r shadow-sm mb-6 flex justify-between items-center">
+            <div>
+                <h2 class="text-xl font-bold text-gray-700">Day 5: 賦歸</h2>
+                <p class="text-gray-600">台場住宿 &gt; 成田機場 &gt; 桃園機場</p>
+            </div>
+            <button onclick="switchTab('info')" class="bg-white text-gray-500 text-sm px-3 py-1 rounded border border-gray-300 hover:bg-gray-50">
+                查看電子票券
+            </button>
         </div>
 
-        <!-- Day 5 Content -->
-        <div id="day5" class="tab-content space-y-8 animate-fade-in">
-            <div class="bg-gray-100 border-l-4 border-gray-500 p-4 rounded-r shadow-sm mb-6 flex justify-between items-center">
-                <div>
-                    <h2 class="text-xl font-bold text-gray-700">Day 5: 賦歸</h2>
-                    <p class="text-gray-600">台場住宿 &gt; 成田機場 &gt; 桃園機場</p>
-                </div>
-                <button onclick="switchTab('info')" class="bg-white text-gray-500 text-sm px-3 py-1 rounded border border-gray-300 hover:bg-gray-50">
-                    查看電子票券
-                </button>
-            </div>
-
-            <div class="relative pl-8 border-l-2 border-gray-200 space-y-12">
-                <!-- Bus -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-yellow-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">directions_bus</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-lg font-bold">利木津巴士前往機場</h3>
-                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">10:25</span>
-                            </div>
-                            <p class="text-gray-600 mb-4">從 東京灣有明相鐵GRAND FRESA飯店 出發</p>
-                            <div class="bg-yellow-50 p-3 rounded border border-yellow-100 inline-block">
-                                <p class="text-sm text-yellow-800 font-bold">訂單編號: 26KK221090770</p>
-                            </div>
+        <div class="relative pl-8 border-l-2 border-gray-200 space-y-12">
+            <!-- Bus -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-yellow-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">directions_bus</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold">利木津巴士前往機場</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">10:25</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">從 東京灣有明相鐵GRAND FRESA飯店 出發</p>
+                        <div class="bg-yellow-50 p-3 rounded border border-yellow-100 inline-block">
+                            <p class="text-sm text-yellow-800 font-bold">訂單編號: 26KK221090770</p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Flight Home -->
-                <div class="relative">
-                    <span class="absolute -left-[41px] bg-blue-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">flight_takeoff</span>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-lg font-bold">返程：成田機場 (NRT) &gt; 桃園 (TPE)</h3>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">14:35</span>
-                            </div>
-                            <div class="flex items-center justify-between mb-2">
-                                <p class="text-gray-600">中華航空 CI101</p>
+            <!-- Flight Home -->
+            <div class="relative">
+                <span class="absolute -left-[41px] bg-blue-500 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center material-symbols-outlined shadow">flight_takeoff</span>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold">返程：成田機場 (NRT) &gt; 桃園 (TPE)</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">14:35</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <p class="text-gray-600">中華航空 CI101</p>
                                 <a href="https://zh-tw.flightaware.com/live/flight/CAL101" target="_blank" class="flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium bg-blue-50 px-3 py-1 rounded-full transition-colors">
-                                    <span class="material-symbols-outlined text-sm mr-1">radar</span> FlightAware
-                                </a>
-                            </div>
-                            <p class="text-gray-500 text-sm mt-1">預計抵達桃園：17:45</p>
-                            <div class="bg-gray-50 p-3 rounded-lg text-sm border border-gray-200 mt-4">
-                                <p class="font-semibold text-gray-700 mb-1">接機安排：佳林小客車租賃</p>
-                                <p class="text-gray-600">車輛：九人座包車 * 2 | 訂購人：黃章郡</p>
-                            </div>
+                                <span class="material-symbols-outlined text-sm mr-1">radar</span> FlightAware
+                            </a>
+                        </div>
+                        <p class="text-gray-500 text-sm mt-1">預計抵達桃園：17:45</p>
+                        <div class="bg-gray-50 p-3 rounded-lg text-sm border border-gray-200 mt-4">
+                            <p class="font-semibold text-gray-700 mb-1">接機安排：佳林小客車租賃</p>
+                            <p class="text-gray-600">車輛：九人座包車 * 2 | 訂購人：黃章郡</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Info Tab -->
-        <div id="info" class="tab-content animate-fade-in">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <!-- Electronic Tickets & Vouchers Section -->
-                <div class="md:col-span-2">
-                    <h3 class="text-2xl font-bold mb-6 flex items-center text-gray-800">
-                        <span class="material-symbols-outlined mr-2 text-red-500">confirmation_number</span> 電子票券與憑證
+    <!-- Info Tab -->
+    <div id="info" class="tab-content animate-fade-in active">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Taiwan Airport Transfer Section (NEW) -->
+            <div class="md:col-span-2">
+                <div class="bg-white rounded-xl shadow p-6 border border-gray-100">
+                    <h3 class="text-xl font-bold mb-4 flex items-center text-gray-800">
+                        <span class="material-symbols-outlined mr-2 text-green-600">airport_shuttle</span> 台灣機場接送 (佳林小客車)
                     </h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Transport Voucher Card -->
-                        <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden ticket-stub relative">
-                            <div class="bg-gray-800 text-white p-4 flex justify-between items-center">
-                                <span class="font-bold flex items-center"><span class="material-symbols-outlined mr-2">directions_bus</span> 巴士/包車憑證</span>
-                                <span class="text-xs bg-gray-700 px-2 py-1 rounded">已確認</span>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- Departure -->
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-green-800 text-lg">送機 (台中 → 桃園)</h4>
+                                <span class="bg-white text-green-600 text-xs px-2 py-1 rounded border border-green-200 font-bold">1/28 (三)</span>
                             </div>
-                            <div class="p-6 space-y-4">
-                                <div>
-                                    <p class="text-xs text-gray-500">1/29 東京 &gt; 河口湖</p>
-                                    <p class="font-bold text-lg">株式会社大寅 (包車)</p>
-                                    <div class="bg-gray-100 p-2 rounded mt-1 font-mono text-center text-gray-700">ID: 25KK227520227</div>
-                                </div>
-                                <div class="ticket-divider"></div>
-                                <div>
-                                    <p class="text-xs text-gray-500">1/30 河口湖 &gt; 東京</p>
-                                    <p class="font-bold text-lg">株式会社大寅 (包車)</p>
-                                    <div class="bg-gray-100 p-2 rounded mt-1 font-mono text-center text-gray-700">ID: 25KK227520527</div>
-                                </div>
-                                <div class="ticket-divider"></div>
-                                <div>
-                                    <p class="text-xs text-gray-500">2/1 機場交通</p>
-                                    <p class="font-bold text-lg">利木津巴士 (Limousine Bus)</p>
-                                    <div class="bg-gray-100 p-2 rounded mt-1 font-mono text-center text-gray-700">ID: 26KK221090770</div>
-                                    <a href="https://www.limousinebus.co.jp/en/" target="_blank" class="block text-center text-xs text-blue-500 mt-2 hover:underline">官方網站確認</a>
+                            <div class="space-y-2 text-sm text-gray-700">
+                                <p><span class="font-semibold">時間：</span>08:00 出發</p>
+                                <p><span class="font-semibold">接駁點：</span>台中市大雅區大林路271巷36-6號</p>
+                                <p><span class="font-semibold">航班：</span>華航 CI104 (12:35 起飛)</p>
+                                <p><span class="font-semibold">聯絡人：</span>黃元芝 (0910-495-140)</p>
+                                <p><span class="font-semibold">人數/行李：</span>7大1小 / 7件</p>
+                                <div class="mt-3 pt-3 border-t border-green-200">
+                                    <p class="font-bold text-green-800 mb-1">【司機資料】</p>
+                                    <p>司機：何紘漳 (0907-320-600)</p>
+                                    <p>車號：RFL-7776 (福斯 T6.1 銀)</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Attraction Tickets Link Card -->
-                        <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden relative">
-                            <div class="bg-red-500 text-white p-4 flex justify-between items-center">
-                                <span class="font-bold flex items-center"><span class="material-symbols-outlined mr-2">attractions</span> 景點票券</span>
-                                <span class="text-xs bg-red-600 px-2 py-1 rounded">需現場/線上購買</span>
+                        <!-- Arrival -->
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-green-800 text-lg">接機 (桃園 → 台中)</h4>
+                                <span class="bg-white text-green-600 text-xs px-2 py-1 rounded border border-green-200 font-bold">2/1 (日)</span>
                             </div>
-                            <div class="p-6 space-y-4">
-                                <div class="flex justify-between items-center">
-                                    <div>
-                                        <p class="font-bold">富士全景纜車</p>
-                                        <p class="text-xs text-gray-500">Day 2</p>
-                                    </div>
-                                    <a href="https://www.mtfujiropeway.jp/en/" target="_blank" class="border border-red-500 text-red-500 hover:bg-red-50 px-3 py-1 rounded text-sm transition-colors">
-                                        購票詳情
-                                    </a>
-                                </div>
-                                <div class="border-t border-gray-100"></div>
-                                <div class="flex justify-between items-center">
-                                    <div>
-                                        <p class="font-bold">河口湖遊覽船「天晴」</p>
-                                        <p class="text-xs text-gray-500">Day 3</p>
-                                    </div>
-                                    <a href="https://www.gltjp.com/en/directory/item/12079/" target="_blank" class="border border-red-500 text-red-500 hover:bg-red-50 px-3 py-1 rounded text-sm transition-colors">
-                                        官方資訊
-                                    </a>
-                                </div>
-                                <div class="border-t border-gray-100"></div>
-                                <div class="flex justify-between items-center">
-                                    <div>
-                                        <p class="font-bold">東京水上巴士 Emeraldas</p>
-                                        <p class="text-xs text-gray-500">Day 4</p>
-                                    </div>
-                                    <a href="https://www.suijobus.co.jp/en/" target="_blank" class="border border-red-500 text-red-500 hover:bg-red-50 px-3 py-1 rounded text-sm transition-colors">
-                                        預約船票
-                                    </a>
-                                </div>
-                                <div class="border-t border-gray-100"></div>
-                                <div class="flex justify-between items-center">
-                                    <div>
-                                        <p class="font-bold">京成電鐵 Skyliner</p>
-                                        <p class="text-xs text-gray-500">Day 1 機場接駁</p>
-                                    </div>
-                                    <a href="https://www.keisei.co.jp/keisei/tetudou/skyliner/e-ticket/en/" target="_blank" class="border border-blue-500 text-blue-500 hover:bg-blue-50 px-3 py-1 rounded text-sm transition-colors">
-                                        購票
-                                    </a>
+                            <div class="space-y-2 text-sm text-gray-700">
+                                <p><span class="font-semibold">航班：</span>華航 CI101 (17:45 抵達)</p>
+                                <p><span class="font-semibold">目的地：</span>台中市大雅區大林路271巷36-6號</p>
+                                <p><span class="font-semibold">聯絡人：</span>黃章郡 (0936-310-514)</p>
+                                <p><span class="font-semibold">人數/行李：</span>8大1小 / 8件</p>
+                                <div class="mt-3 pt-3 border-t border-green-200">
+                                    <p class="font-bold text-green-800 mb-1">【司機資料 1】</p>
+                                    <p>司機：陳昱霖 (0921-388-584)</p>
+                                    <p class="mb-2">車號：RFN-6111 (V250d 黑 八座)</p>
+                                    
+                                    <p class="font-bold text-green-800 mb-1">【司機資料 2】</p>
+                                    <p>司機：何紘漳 (0907-320-600)</p>
+                                    <p>車號：RFL-7776 (福斯 T6.1 銀)</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Flights Card -->
-                <div class="bg-white rounded-xl shadow p-6 border border-gray-100 h-fit">
-                    <h3 class="text-xl font-bold mb-4 flex items-center"><span class="material-symbols-outlined mr-2">flight</span> 航班資訊</h3>
-                    <div class="space-y-4">
-                        <div class="border-b pb-4">
-                            <div class="flex justify-between items-start mb-2">
-                                <div>
-                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded font-bold">去程</span>
-                                    <p class="font-bold text-lg mt-1">CI104 中華航空</p>
-                                    <p class="text-gray-500 text-sm">2026.1.28 (三)</p>
-                                </div>
-                                <a href="https://zh-tw.flightaware.com/live/flight/CI104" target="_blank" class="text-blue-500 hover:bg-blue-50 p-2 rounded-full transition-colors" title="FlightAware 追蹤">
-                                    <span class="material-symbols-outlined">radar</span>
-                                </a>
-                            </div>
-                            <div class="flex justify-between text-sm text-gray-600 mt-1 bg-gray-50 p-3 rounded">
-                                <div class="text-center">
-                                    <p class="font-bold text-gray-800">12:35</p>
-                                    <p class="text-xs">TPE T2</p>
-                                </div>
-                                <div class="flex flex-col justify-center items-center px-4">
-                                    <span class="material-symbols-outlined text-gray-400 text-sm">flight_takeoff</span>
-                                    <div class="h-[1px] w-12 bg-gray-300 my-1"></div>
-                                </div>
-                                <div class="text-center">
-                                    <p class="font-bold text-gray-800">16:45</p>
-                                    <p class="text-xs">NRT T2</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between items-start mb-2">
-                                <div>
-                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded font-bold">回程</span>
-                                    <p class="font-bold text-lg mt-1">CI101 中華航空</p>
-                                    <p class="text-gray-500 text-sm">2026.2.1 (日)</p>
-                                </div>
-                                <a href="https://zh-tw.flightaware.com/live/flight/CI101" target="_blank" class="text-blue-500 hover:bg-blue-50 p-2 rounded-full transition-colors" title="FlightAware 追蹤">
-                                    <span class="material-symbols-outlined">radar</span>
-                                </a>
-                            </div>
-                            <div class="flex justify-between text-sm text-gray-600 mt-1 bg-gray-50 p-3 rounded">
-                                <div class="text-center">
-                                    <p class="font-bold text-gray-800">14:35</p>
-                                    <p class="text-xs">NRT T2</p>
-                                </div>
-                                <div class="flex flex-col justify-center items-center px-4">
-                                    <span class="material-symbols-outlined text-gray-400 text-sm">flight_takeoff</span>
-                                    <div class="h-[1px] w-12 bg-gray-300 my-1"></div>
-                                </div>
-                                <div class="text-center">
-                                    <p class="font-bold text-gray-800">17:45</p>
-                                    <p class="text-xs">TPE T2</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Accommodation Card -->
-                <div class="bg-white rounded-xl shadow p-6 border border-gray-100 h-fit">
-                    <h3 class="text-xl font-bold mb-4 flex items-center"><span class="material-symbols-outlined mr-2">hotel</span> 住宿詳情</h3>
-                    <ul class="space-y-6">
-                        <li class="pb-4 border-b">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <p class="font-bold text-lg text-indigo-700">Apa Hotel Ueno Eki Minami</p>
-                                    <p class="text-xs text-gray-500 mt-1">1/28 入住 (1晚)</p>
-                                </div>
-                                <div class="flex gap-1">
-                                    <a href="https://www.google.com/travel/search?q=Apa+Hotel+Ueno+Eki+Minami" target="_blank" class="text-gray-400 hover:text-indigo-600 p-1">
-                                        <span class="material-symbols-outlined">bed</span>
-                                    </a>
-                                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Apa+Hotel+Ueno+Eki+Minami" target="_blank" class="text-gray-400 hover:text-blue-600 p-1">
-                                        <span class="material-symbols-outlined">map</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="pb-4 border-b">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <p class="font-bold text-lg text-indigo-700">富之湖酒店 (Tominoko Hotel)</p>
-                                    <p class="text-xs text-gray-500 mt-1">1/29 入住 (1晚) | 含早晚餐</p>
-                                </div>
-                                <div class="flex gap-1">
-                                    <a href="https://www.google.com/travel/search?q=Tominoko+Hotel+Kawaguchiko" target="_blank" class="text-gray-400 hover:text-indigo-600 p-1">
-                                        <span class="material-symbols-outlined">bed</span>
-                                    </a>
-                                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Tominoko+Hotel" target="_blank" class="text-gray-400 hover:text-blue-600 p-1">
-                                        <span class="material-symbols-outlined">map</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <p class="font-bold text-lg text-indigo-700">東京灣有明相鐵 GRAND FRESA</p>
-                                    <p class="text-xs text-gray-500 mt-1">1/30 - 2/1 入住 (2晚)</p>
-                                </div>
-                                <div class="flex gap-1">
-                                    <a href="https://www.google.com/travel/search?q=Sotetsu+Grand+Fresa+Tokyo+Bay+Ariake" target="_blank" class="text-gray-400 hover:text-indigo-600 p-1">
-                                        <span class="material-symbols-outlined">bed</span>
-                                    </a>
-                                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Sotetsu+Grand+Fresa+Tokyo-Bay+Ariake" target="_blank" class="text-gray-400 hover:text-blue-600 p-1">
-                                        <span class="material-symbols-outlined">map</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
+
+            <!-- Electronic Tickets & Vouchers Section -->
+            <div class="md:col-span-2">
+                <h3 class="text-2xl font-bold mb-6 flex items-center text-gray-800">
+                    <span class="material-symbols-outlined mr-2 text-red-500">confirmation_number</span> 電子票券與憑證
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Transport Voucher Card -->
+                    <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden ticket-stub relative">
+                        <div class="bg-gray-800 text-white p-4 flex justify-between items-center">
+                                <span class="font-bold flex items-center"><span class="material-symbols-outlined mr-2">directions_bus</span> 巴士/包車憑證</span>
+                            <span class="text-xs bg-gray-700 px-2 py-1 rounded">已確認</span>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div>
+                                <p class="text-xs text-gray-500">1/29 東京 &gt; 河口湖</p>
+                                <p class="font-bold text-lg">株式会社大寅 (包車)</p>
+                                <div class="bg-gray-100 p-2 rounded mt-1 font-mono text-center text-gray-700">ID: 25KK227520227</div>
+                            </div>
+                            <div class="ticket-divider"></div>
+                            <div>
+                                <p class="text-xs text-gray-500">1/30 河口湖 &gt; 東京</p>
+                                <p class="font-bold text-lg">株式会社大寅 (包車)</p>
+                                <div class="bg-gray-100 p-2 rounded mt-1 font-mono text-center text-gray-700">ID: 25KK227520527</div>
+                            </div>
+                            <div class="ticket-divider"></div>
+                            <div>
+                                <p class="text-xs text-gray-500">2/1 機場交通</p>
+                                <p class="font-bold text-lg">利木津巴士 (Limousine Bus)</p>
+                                <div class="bg-gray-100 p-2 rounded mt-1 font-mono text-center text-gray-700">ID: 26KK221090770</div>
+                                <a href="https://www.limousinebus.co.jp/en/" target="_blank" class="block text-center text-xs text-blue-500 mt-2 hover:underline">官方網站確認</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Attraction Tickets Link Card -->
+                    <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden relative">
+                        <div class="bg-red-500 text-white p-4 flex justify-between items-center">
+                            <span class="font-bold flex items-center"><span class="material-symbols-outlined mr-2">attractions</span> 景點票券</span>
+                            <span class="text-xs bg-red-600 px-2 py-1 rounded">需現場/線上購買</span>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="font-bold">富士全景纜車</p>
+                                    <p class="text-xs text-gray-500">Day 2</p>
+                                </div>
+                                <a href="https://www.mtfujiropeway.jp/en/" target="_blank" class="border border-red-500 text-red-500 hover:bg-red-50 px-3 py-1 rounded text-sm transition-colors">
+                                    購票詳情
+                                </a>
+                            </div>
+                            <div class="border-t border-gray-100"></div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="font-bold">河口湖遊覽船「天晴」</p>
+                                    <p class="text-xs text-gray-500">Day 3</p>
+                                </div>
+                                <a href="https://www.gltjp.com/en/directory/item/12079/" target="_blank" class="border border-red-500 text-red-500 hover:bg-red-50 px-3 py-1 rounded text-sm transition-colors">
+                                    官方資訊
+                                </a>
+                            </div>
+                            <div class="border-t border-gray-100"></div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="font-bold">東京水上巴士 Emeraldas</p>
+                                    <p class="text-xs text-gray-500">Day 4</p>
+                                </div>
+                                <a href="https://www.suijobus.co.jp/en/" target="_blank" class="border border-red-500 text-red-500 hover:bg-red-50 px-3 py-1 rounded text-sm transition-colors">
+                                    預約船票
+                                </a>
+                            </div>
+                            <div class="border-t border-gray-100"></div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="font-bold">京成電鐵 Skyliner</p>
+                                    <p class="text-xs text-gray-500">Day 1 機場接駁</p>
+                                </div>
+                                <a href="https://www.keisei.co.jp/keisei/tetudou/skyliner/e-ticket/en/" target="_blank" class="border border-blue-500 text-blue-500 hover:bg-blue-50 px-3 py-1 rounded text-sm transition-colors">
+                                    購票
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flights Card -->
+            <div class="bg-white rounded-xl shadow p-6 border border-gray-100 h-fit">
+                <h3 class="text-xl font-bold mb-4 flex items-center"><span class="material-symbols-outlined mr-2">flight</span> 航班資訊</h3>
+                <div class="space-y-4">
+                    <div class="border-b pb-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded font-bold">去程</span>
+                                <p class="font-bold text-lg mt-1">CI104 中華航空</p>
+                                <p class="text-gray-500 text-sm">2026.1.28 (三)</p>
+                            </div>
+                            <a href="https://zh-tw.flightaware.com/live/flight/CI104" target="_blank" class="text-blue-500 hover:bg-blue-50 p-2 rounded-full transition-colors" title="FlightAware 追蹤">
+                                <span class="material-symbols-outlined">radar</span>
+                            </a>
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-600 mt-1 bg-gray-50 p-3 rounded">
+                            <div class="text-center">
+                                <p class="font-bold text-gray-800">12:35</p>
+                                <p class="text-xs">TPE T2</p>
+                            </div>
+                            <div class="flex flex-col justify-center items-center px-4">
+                                <span class="material-symbols-outlined text-gray-400 text-sm">flight_takeoff</span>
+                                <div class="h-[1px] w-12 bg-gray-300 my-1"></div>
+                            </div>
+                            <div class="text-center">
+                                <p class="font-bold text-gray-800">16:45</p>
+                                <p class="text-xs">NRT T2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded font-bold">回程</span>
+                                <p class="font-bold text-lg mt-1">CI101 中華航空</p>
+                                <p class="text-gray-500 text-sm">2026.2.1 (日)</p>
+                            </div>
+                            <a href="https://zh-tw.flightaware.com/live/flight/CI101" target="_blank" class="text-blue-500 hover:bg-blue-50 p-2 rounded-full transition-colors" title="FlightAware 追蹤">
+                                <span class="material-symbols-outlined">radar</span>
+                            </a>
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-600 mt-1 bg-gray-50 p-3 rounded">
+                            <div class="text-center">
+                                <p class="font-bold text-gray-800">14:35</p>
+                                <p class="text-xs">NRT T2</p>
+                            </div>
+                            <div class="flex flex-col justify-center items-center px-4">
+                                <span class="material-symbols-outlined text-gray-400 text-sm">flight_takeoff</span>
+                                <div class="h-[1px] w-12 bg-gray-300 my-1"></div>
+                            </div>
+                            <div class="text-center">
+                                <p class="font-bold text-gray-800">17:45</p>
+                                <p class="text-xs">TPE T2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accommodation Card -->
+            <div class="bg-white rounded-xl shadow p-6 border border-gray-100 h-fit">
+                <h3 class="text-xl font-bold mb-4 flex items-center"><span class="material-symbols-outlined mr-2">hotel</span> 住宿詳情</h3>
+                <ul class="space-y-6">
+                    <li class="pb-4 border-b">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-bold text-lg text-indigo-700">Apa Hotel Ueno Eki Minami</p>
+                                <p class="text-xs text-gray-500 mt-1">1/28 入住 (1晚)</p>
+                            </div>
+                            <div class="flex gap-1">
+                                <a href="https://www.google.com/travel/search?q=Apa+Hotel+Ueno+Eki+Minami" target="_blank" class="text-gray-400 hover:text-indigo-600 p-1">
+                                    <span class="material-symbols-outlined">bed</span>
+                                </a>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Apa+Hotel+Ueno+Eki+Minami" target="_blank" class="text-gray-400 hover:text-blue-600 p-1">
+                                    <span class="material-symbols-outlined">map</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pb-4 border-b">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-bold text-lg text-indigo-700">富之湖酒店 (Tominoko Hotel)</p>
+                                <p class="text-xs text-gray-500 mt-1">1/29 入住 (1晚) | 含早晚餐</p>
+                            </div>
+                            <div class="flex gap-1">
+                                <a href="https://www.google.com/travel/search?q=Tominoko+Hotel+Kawaguchiko" target="_blank" class="text-gray-400 hover:text-indigo-600 p-1">
+                                    <span class="material-symbols-outlined">bed</span>
+                                </a>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Tominoko+Hotel" target="_blank" class="text-gray-400 hover:text-blue-600 p-1">
+                                    <span class="material-symbols-outlined">map</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-bold text-lg text-indigo-700">東京灣有明相鐵 GRAND FRESA</p>
+                                <p class="text-xs text-gray-500 mt-1">1/30 - 2/1 入住 (2晚)</p>
+                            </div>
+                            <div class="flex gap-1">
+                                <a href="https://www.google.com/travel/search?q=Sotetsu+Grand+Fresa+Tokyo+Bay+Ariake" target="_blank" class="text-gray-400 hover:text-indigo-600 p-1">
+                                    <span class="material-symbols-outlined">bed</span>
+                                </a>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Sotetsu+Grand+Fresa+Tokyo-Bay+Ariake" target="_blank" class="text-gray-400 hover:text-blue-600 p-1">
+                                    <span class="material-symbols-outlined">map</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </div>
 
-    </main>
+</main>
 
-    <script>
-        function switchTab(tabId) {
-            // Hide all tabs
-            document.querySelectorAll('.tab-content').forEach(el => {
-                el.classList.remove('active');
-            });
-            // Deactivate all nav items
-            document.querySelectorAll('.nav-item').forEach(el => {
-                el.classList.remove('active');
-            });
-            
-            // Show selected tab
-            document.getElementById(tabId).classList.add('active');
-            
-            // Activate selected nav item (find button with onclick matching)
-            const navButtons = document.querySelectorAll('.nav-item');
-            if (tabId === 'day1') navButtons[0].classList.add('active');
-            if (tabId === 'day2') navButtons[1].classList.add('active');
-            if (tabId === 'day3') navButtons[2].classList.add('active');
-            if (tabId === 'day4') navButtons[3].classList.add('active');
-            if (tabId === 'day5') navButtons[4].classList.add('active');
-            if (tabId === 'info') navButtons[5].classList.add('active');
-            
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
-    <style>
-        .animate-fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .text-shadow-lg {
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        }
-    </style>
-    <!--
+<script>
+    function switchTab(tabId) {
+        // Hide all tabs
+        document.querySelectorAll('.tab-content').forEach(el => {
+            el.classList.remove('active');
+        });
+        // Deactivate all nav items
+        document.querySelectorAll('.nav-item').forEach(el => {
+            el.classList.remove('active');
+        });
+        
+        // Show selected tab
+        document.getElementById(tabId).classList.add('active');
+        
+        // Activate selected nav item (find button with onclick matching)
+        const navButtons = document.querySelectorAll('.nav-item');
+        if (tabId === 'day1') navButtons[0].classList.add('active');
+        if (tabId === 'day2') navButtons[1].classList.add('active');
+        if (tabId === 'day3') navButtons[2].classList.add('active');
+        if (tabId === 'day4') navButtons[3].classList.add('active');
+        if (tabId === 'day5') navButtons[4].classList.add('active');
+        if (tabId === 'info') navButtons[5].classList.add('active');
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+<style>
+    .animate-fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .text-shadow-lg {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+</style>
+<!--
     "/gen?prompt=Mount+Fuji+view+from+Lake+Kawaguchi+in+winter+with+snow+clear+blue+sky&aspect=16:9"
     "/image?query=Apa+Hotel+Ueno+Eki+Minami+facade&aspect=4:3"
     "/image?query=Yakiniku+Bouya+Ueno+meat+platter&aspect=4:3"
